@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Ant" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICACAAAAAAAAAAhAIIAAAIAAAAAgAAACoARAAAAEBAg=</HashCode>
+      <FileName>Ant.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Position" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAAAgAAAAAQAAAEBAAAAAAABgAAAAIAA=</HashCode>
+      <FileName>Position.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resource" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAEgAAAIoAAAAAAAAIAAQIAAAACBAAAACAAAAAQARgA=</HashCode>
+      <FileName>Resource.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="info_type" Collapsed="true">
+    <Position X="17" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACAAI=</HashCode>
+      <FileName>Game Settings.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="res_type" Collapsed="true">
+    <Position X="17" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAgAAQAAAIAAAAAAAAAAAAI=</HashCode>
+      <FileName>Game Settings.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="res_size" Collapsed="true">
+    <Position X="18.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Game Settings.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
