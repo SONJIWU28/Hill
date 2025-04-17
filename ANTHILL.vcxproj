@@ -36,6 +36,7 @@
   <ItemGroup>
     <ClCompile Include="Ant.cpp" />
     <ClCompile Include="Anthill.cpp" />
+    <ClCompile Include="Cemetery.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Game.cpp" />

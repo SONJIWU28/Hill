@@ -12,18 +12,21 @@ private:
     bool visible = true;
 public:
     static int count;
-    Resource(res_type t = no_res, res_size s = small, Position p = Position()) : quantity(1), id(count++), size(s), type(t), pos(p), visible(true) {
+    Resource(res_type t = no_res, res_size s = small, Position p = Position())
+        : quantity(1), id(count++), size(s), type(t), pos(p), visible(true) {
         shape.setPointCount(count_of_angles_in_form);
         ants_for_collecting = size * 2;
         shape.setRadius(small_resource_size);
-        shape.setFillColor(Color(0, 153, 0));
         shape.setPosition(pos.x, pos.y);
-        if (s == medium) quantity = 3;
-        else if (s == big) quantity = 7;
+        set_color(t); // ← вот это!
+        if (s == small) quantity = 1;
+        else if (s == medium) quantity = 3;
+        else if (s == big) quantity = 5;
     };
     void decrease_quantity(int amount);
     void set_posit(float a, float b) { pos.x = a; pos.y = b; shape.setPosition(a, b); }
-    void set_invisible() { visible = false; }
+    void set_invisible() { visible = 0; }
+    void set_visible() { visible = 1; }
     void set_color(res_type type);
     void set_shape_size(int x) { shape.setRadius(x); }
 

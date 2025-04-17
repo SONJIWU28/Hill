@@ -23,16 +23,20 @@ void create_cluster(vector<Resource>& resources, float x, float y, res_type type
 void Resource::set_color(res_type type)
 {
     switch (type) {
-    case food:shape.setFillColor(Color(0, 153, 0)); break;
-    case stick:shape.setFillColor(Color(115, 66, 34)); break;
-    case body:shape.setFillColor(Color(134, 138, 142)); break;
-    case trash:shape.setFillColor(Color(128, 128, 50)); break;
+    case food:shape.setFillColor(Color(130, 200, 130)); break;
+    case stick:shape.setFillColor(Color(139, 90, 50)); break;
+    case body:shape.setFillColor(Color(180, 180, 180)); break;
+    case trash:shape.setFillColor(Color(170, 170, 100)); break;
     }
 }
 
 void Resource::decrease_quantity(int amount) {
+    // только для палок и еды!
+    if (type != food && type != stick) return;
+
     quantity -= amount;
     if (quantity < 0) quantity = 0;
+
     float radius = 0.0f;
     float k = 1.0f;
     if (size == small) radius = small_resource_size;
@@ -44,6 +48,9 @@ void Resource::decrease_quantity(int amount) {
         radius = big_resource_size;
         k = static_cast<float>(quantity) / 7.0f;
     }
-    shape.setRadius(k * radius);
+
+    shape.setRadius(std::max(1.f, k * radius));
+    shape.setPosition(pos.x, pos.y);
+
     if (quantity == 0) set_invisible();
 }

@@ -1,4 +1,5 @@
-﻿#include "Game Settings.h"
+﻿#pragma once
+#include "Game Settings.h"
 #include "Ant.h"
 
 class Anthill {
@@ -19,7 +20,7 @@ public:
     void hunger();
     void born_baby();
     void upd_ant_stats();
-    void upd_anthill(int ticks);
+    void upd_anthill(int ticks, vector<Resource>& resources);
     void default_count() { ants = soldiers = builders = cleaners = sitters = babies = shepherds = collectors = 0; }
     void kill_colony() { colony.clear(); }
     static void add_food() { food_count++; }

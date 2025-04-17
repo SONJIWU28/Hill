@@ -1,5 +1,7 @@
 ﻿#pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+#include <sstream>
 #include <iostream>
 #include <vector>
 #include <random>
@@ -50,10 +52,11 @@ const int honey_collect_time = 3 * second;
 //Anthill settings
 const int start_radius = 0.07 * window_width;
 const int start_max_ant_count = 20;
-const int start_food_limit = 3000;
-const int start_stick_for_update = 2000;
+const int start_food_limit = 800;
+const int start_stick_for_update = 20;
 const int start_ant_count = 30;
 const int min_downgrade_period = 7 * second;
+const int hunger_damage = 1;
 
 //Ant born and feeding
 const int min_born_period = 2 * second;
@@ -66,5 +69,5 @@ const int min_enemy_in_wave = 5;
 const int enemy_speed = 4;
 
 enum info_type { food_info, stick_info, enemy };
-enum res_type { no_res, food, stick, body, trash };
+enum res_type { no_res, food, stick, aphid,baby, body, trash };
 enum res_size { small = madium_resource_size, medium = madium_resource_size, big = big_resource_size };

@@ -1,4 +1,5 @@
 ﻿#include "Anthill.h"
+
 int Anthill::food_count = 0;
 int Anthill::stick_count = 0;
 
@@ -13,7 +14,7 @@ Anthill::Anthill() :lvl(1), rad(start_radius) {
     max_ants = start_max_ant_count;
     sticks_for_upd = start_stick_for_update;
     max_food = start_food_limit;
-    shape.setFillColor(Color(115, 66, 34));
+    shape.setFillColor(Color(160, 100, 60));
 }
 
 void Anthill::up_lvl() {
@@ -72,10 +73,10 @@ void Anthill::upd_ant_stats()
     }
 }
 
-void Anthill::upd_anthill(int ticks)
+void Anthill::upd_anthill(int ticks, vector<Resource>& resources)
 {
     upd_ant_stats();
-    //if (ticks % feeding_period == 0) feeding();
+    //hunger();
     if (food_count > food_for_born && ticks % min_born_period == 0) {
         born_baby();
         food_count -= food_for_born;
@@ -88,9 +89,10 @@ void Anthill::hunger() {
     int ant_count = colony.size();
     if (food_count < ant_count) {
         for (auto& ant : colony) {
-            int new_hp = ant.get_hp() - hungry_damage;
+            int new_hp = ant.get_hp() - hunger_damage;
             ant.set_hp(new_hp);
         }
     }
     else food_count -= ant_count;
+
 }
